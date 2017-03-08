@@ -1,4 +1,16 @@
-<%= @user.name %>
-<%= @user.email %>
-<%= @user.password %>
-<%= @user.gender %>
+<ul class='userlist'>
+  <li class='userlist-item'>
+    <%= @user.name %>
+  </li>
+  <li class='userlist-item'>
+    <%= @user.email %>
+  </li>
+  <li class='userlist-item'>
+    <%= @user.password %>
+  </li>
+  <%- if @user.gender.present? %>
+    <li class='userlist-item'>
+      <%= @user.gender %>
+    </li>
+  <%- end %>
+</ul>
